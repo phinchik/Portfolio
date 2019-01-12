@@ -1,0 +1,37 @@
+@import "../abstract/variables";
+@import "../abstract/mixins";
+@import "../base/animation";
+@import "../base/utilities";
+@import "../components/composition";
+
+.section-about {
+  background-color: $color-gray-1;
+  padding: 25rem 0;
+  margin-top: -30vh;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  margin-bottom: 15vh;
+  z-index: 1000;
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  }
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  }
+  @include respond(tab-land) {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  }
+}
+
+.about-heading {
+  margin-top: -20vh;
+}
+
+.icons {
+  font-size: 4rem;
+  color: $color-white;
+  &-text {
+    font-size: 3rem;
+    color: $color-white;
+  }
+}

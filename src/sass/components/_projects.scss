@@ -1,0 +1,102 @@
+@import "../base/base";
+@import "../base/typography";
+@import "../layout/grid";
+@import "../abstract/variables";
+@import "../abstract/mixins";
+@import "../base/animation";
+@import "./button";
+@import "../abstract/mixins";
+
+.section-projects {
+  background-color: $color-gray-2;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 98%);
+  position: relative;
+  margin-bottom: 10vh;
+
+  @include respond(phone) {
+    margin-top: -25vh;
+  }
+  @include respond(tab-port) {
+    margin-top: -25vh;
+  }
+  @include respond(tab-land) {
+    margin-top: -25vh;
+  }
+
+  &-photos {
+    max-width: 100%;
+    float: right;
+    position: absolute;
+    border-radius: 2px;
+    z-index: 10;
+    transition: all 0.2s;
+    height: 400px;
+    margin-top: 5%;
+    margin-left: 5%;
+
+    @include clearfix;
+
+    @include respond(tab-port) {
+      position: relative;
+      width: 100%;
+    }
+
+    &-1 {
+      height: 350px;
+      width: 50%;
+      position: absolute;
+      top: -5%;
+      right: 10%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+      outline-offset: 2rem;
+      @include clearfix;
+
+      &:hover {
+        outline: 1rem solid $color-primary-light;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
+
+      @include respond(tab-port) {
+        height: 300px;
+        outline-offset: 1rem;
+      }
+    }
+
+    &-2 {
+      height: 350px;
+      width: 50%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+      outline-offset: 2rem;
+      @include clearfix;
+      &:hover {
+        outline: 1rem solid $color-primary-light;
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
+      @include respond(tab-port) {
+        height: 300px;
+        outline-offset: 1rem;
+      }
+    }
+  }
+}
+
+.button {
+  @include projectBtn;
+  height: 6rem;
+
+  @include respond(tab-port) {
+    height: 7rem;
+  }
+  @include respond(tab-land) {
+    height: 6rem;
+  }
+}
+.content {
+  margin-top: 15%;
+}

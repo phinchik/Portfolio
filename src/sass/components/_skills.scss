@@ -1,0 +1,31 @@
+@import "../base/base";
+@import "../base/typography";
+@import "../layout/grid";
+@import "../abstract/variables";
+@import "../abstract/mixins";
+
+.section-skills {
+  background-color: $color-gray-1;
+  padding: 25rem 0;
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 95%);
+  margin-top: -20vh;
+  height: auto;
+  margin-bottom: 20vh;
+  @include respond(phone) {
+    margin-top: -25vh;
+  }
+  @include respond(tab-port) {
+    margin-top: -25vh;
+  }
+  @include respond(tab-land) {
+    margin-top: -25vh;
+  }
+}
+
+.icon {
+  color: $color-white;
+  font-size: 8rem;
+  height: 1rem;
+  margin: 10rem 2rem auto;
+  text-align: center;
+}

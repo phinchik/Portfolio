@@ -1,0 +1,109 @@
+@import "../abstract/variables";
+@import "../abstract/mixins";
+
+.heading-primary {
+  color: $color-white;
+  backface-visibility: hidden;
+  width: 100%;
+  text-align: center;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: east-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-size: 4rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1.5rem;
+    padding-left: 4rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: east-out;
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, $color-gray-dark, $color-white);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4.5rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  color: $color-white;
+  backface-visibility: hidden;
+  &--main {
+    display: block;
+    color: $color-white;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: east-out;
+  }
+  &--sub {
+    display: block;
+    color: $color-white;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-left: 4rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: east-out;
+    margin-bottom: 2rem;
+  }
+
+  &--tech {
+    @include tech;
+  }
+}
+
+.paragraph {
+  font-size: 2.5rem;
+  color: $color-white;
+}
