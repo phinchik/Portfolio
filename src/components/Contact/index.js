@@ -8,7 +8,11 @@ class Contact extends Component {
         <div className="u-center-text">
           <h1 className="heading-secondary ">CONTACT ME</h1>
         </div>
-        <div className="row section-contact__details">
+        <form
+          method="POST"
+          action="https://formspree.io/jennyrose.gutierrez02@gmail.com"
+          className="row section-contact__details"
+        >
           <div className="col-1-of-1">
             <input
               className="section-contact__form-input"
@@ -46,7 +50,7 @@ class Contact extends Component {
               Send
             </button>
           </div>
-        </div>
+        </form>
         <section className="section-footer">
           <div className="row">
             <div className="col-1-of-2 " id="text">
